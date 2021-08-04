@@ -21,6 +21,9 @@ const SavedBooks = () => {
 
   const userData = data?.me || {};
 
+  
+  
+
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
     if (!token) {
@@ -28,9 +31,9 @@ const SavedBooks = () => {
     }
     try {
       const { data } = await removeBook({
-        variables: { ...bookId },
+        variables: { bookId },
       });
-
+      
       removeBookId(bookId);
     } catch (err) {
       console.error(err);
@@ -45,19 +48,19 @@ const SavedBooks = () => {
     <>
       <Jumbotron fluid className="text-light bg-dark">
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1>Viewing {userData.username}'s saved books!</h1>
         </Container>
       </Jumbotron>
       <Container>
         <h2>
-          {userData.savedBooks.length
+          {userData.savedBooks?.length
             ? `Viewing ${userData.savedBooks.length} saved ${
                 userData.savedBooks.length === 1 ? "book" : "books"
               }:`
             : "You have no saved books!"}
         </h2>
         <CardColumns>
-          {userData.savedBooks.map((book) => {
+          {userData.savedBooks?.map((book) => {
             return (
               <Card key={book.bookId} border="dark">
                 {book.image ? (
