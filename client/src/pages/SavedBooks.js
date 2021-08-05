@@ -1,10 +1,11 @@
-import React from "react";
+import { React, useEffect } from "react";
 import {
   Jumbotron,
   Container,
   CardColumns,
   Card,
   Button,
+  
 } from "react-bootstrap";
 
 import { useQuery, useMutation } from "@apollo/client";
@@ -22,6 +23,9 @@ const SavedBooks = () => {
   const userData = data?.me || {};
 
   
+  useEffect(() => {
+       console.log("userData: ", userData);
+   }, data);
   
 
   const handleDeleteBook = async (bookId) => {
