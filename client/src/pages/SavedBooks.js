@@ -19,7 +19,8 @@ const SavedBooks = () => {
   const { loading, data } = useQuery(QUERY_ME);
   const [removeBook] = useMutation(REMOVE_BOOK);
 
-  const userData = data?.me || {savedBooks:[]};
+  const userData = data?.me 
+  
 
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
