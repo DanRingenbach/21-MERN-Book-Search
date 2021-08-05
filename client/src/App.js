@@ -7,6 +7,9 @@ import { ApolloProvider, ApolloClient } from '@apollo/client'
 
 
 const client = new ApolloClient({
+  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  cache: new InMemoryCache(),
+
   request: operation => {
     const token = localStorage.getItem('id_token');
 
