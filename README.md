@@ -8,7 +8,7 @@ For this project I was given the front end and most of the back end of a book tr
 - [Usage](#usage)
 - [Credits](#credits)
 - [Deployed Application](#deployment)
-- [Documentation](#documentation)
+- [Screenshot](#screenshot)
 - [License](#license)
 
 ## Usage
@@ -33,9 +33,9 @@ npm run develop
 
 [Graphql](https://www.npmjs.com/package/graphql)
 
-## Documentation
+## Screenshot
 
-[Screenshot](client/public/screenshot)
+![Screenshot](/screenshot.png "Screenshot")
 
 ## License
 
