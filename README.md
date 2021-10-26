@@ -7,7 +7,7 @@ For this project I was given the front end and most of the back end of a book tr
 
 - [Usage](#usage)
 - [Credits](#credits)
-- [Live Application](#live application)
+- [Live Application](#live)
 - [Documentation](#documentation)
 - [License](#license)
 
@@ -17,7 +17,7 @@ To run application
 ```bash
 npm run develop
 ```
-# Live Application
+## Live Application
 [MERN Book Search](https://dan-ringenbach-book-search.herokuapp.com/)
 
 ## Credits
